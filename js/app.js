@@ -67,10 +67,10 @@ let Carlos = new Cliente("Juan Sánchez", "654789321", "calle 789");
 clientes.push(Carlos);
 
 // IMAGENES
-let rutaPaella = 'http://localhost/Restaurante/img/productos/PaellaValenciana.jpg';
-let rutaCocaCola = 'http://localhost/Restaurante/img/productos/CocaColaZero.jpg';
-let rutaMargarita = 'http://localhost/Restaurante/img/productos/PizzaMargarita.jpg';
-let rutaCheeseburguer = 'http://localhost/Restaurante/img/productos/Cheeseburguer.jpg';
+let rutaPaella = 'https://alexisperez445.github.io/APP-GESTION-PEDIDOS/img/productos/PaellaValenciana.jpg';
+let rutaCocaCola = 'https://alexisperez445.github.io/APP-GESTION-PEDIDOS/img/productos/CocaColaZero.jpg';
+let rutaMargarita = 'https://alexisperez445.github.io/APP-GESTION-PEDIDOS/img/productos/PizzaMargarita.jpg';
+let rutaCheeseburguer = 'https://alexisperez445.github.io/APP-GESTION-PEDIDOS/img/productos/Cheeseburguer.jpg';
 
 // PRODUCTOS DE MUESTRA
 let paella = new Producto("Paella", 10, "Mediano", rutaPaella, "Paella valenciana");
@@ -362,6 +362,7 @@ function anyadirProductoPed(e) {
             productoPed = producto;
         }
     });
+    alertify.success('Producto añadido');
     pedido.anyadirProducto(productoPed);
     btnFinalizar.disabled = false;
     btnFinalizar.classList.remove('op50');
@@ -374,6 +375,6 @@ function obtenerImagen() {
     const imagenURL = imagenProducto.value.toString();
     const nombreImagen = imagenURL.lastIndexOf("\\", imagenURL.length - 1);
     let imagen = imagenURL.substring(nombreImagen + 1, imagenURL.length);
-    const rutaImagen = 'http://localhost/Restaurante/img/productos/' + imagen;
+    const rutaImagen = 'https://alexisperez445.github.io/APP-GESTION-PEDIDOS/img/productos/' + imagen;
     return rutaImagen;
 }
